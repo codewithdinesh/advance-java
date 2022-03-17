@@ -1,0 +1,105 @@
+> use BlogPost
+switched to db BlogPost
+> db
+BlogPost
+> db.Post.insert({
+    "name": "5 ways to save money as a student",
+    "slug": "save-money-as-a-student",
+    "description": "This article is for those students who are currently studying and want to save money;I have 5 ways to save money .. let's see..",
+    "author": "Dinesh Rathod",
+    "date":new Date()
+})
+WriteResult({
+    "nInserted": 1
+})
+
+> db.Post.find().pretty()
+{
+    "_id": ObjectId("61c35ffe19c20a3515a89417"),
+    "name": "5 ways to save money as a student",
+    "slug": "save-money-as-a-student",
+    "description": "This article is for those students who are currently studying and want to save money;I have 5 ways to save money .. let's see..",
+    "author": "Dinesh Rathod",
+    "date": ISODate("2021-12-22T17:27:26.750Z")
+}
+
+
+> db.Post.insert({
+    "name": "Tips to get Good marks in MSBTE online Exam",
+    "slug": "msbte-exam-guide",
+    "description": "This article is for those students who are currently studying In MSBTE ;I have Some tips, If ypu follows these tips we will definently get good marks in examination",
+    "author": "Dinesh Rathod",
+    "date":new Date()
+})
+WriteResult({
+    "nInserted": 1
+})
+
+> db.Post.insert({
+    "name": "Title of Blog post",
+    "slug": "It is an URL structure of Blog post",
+    "description": "This is an Post description",
+    "author": "Name of Author",
+    "date":new Date()
+})
+WriteResult({
+    "nInserted": 1
+})
+
+> db.Post.insert({
+    "name": "Should I install Windows 11 ?",
+    "slug": "windows-11-install-guide",
+    "description": "You should install Windows 11 on Your PC if you want new Look.",
+    "author": "Omkar Kurund",
+    "date":new Date()
+})
+WriteResult({
+    "nInserted": 1
+})
+
+> db.Post.insert({
+    "name": "Shuld I learn Java in 2022 ?",
+    "slug": "should-learn-java-in-2022",
+    "description": "You should Learn Java in 2022 ,because Java in everywhere ,There are almost 3 Billions Devices are Running on java.",
+    "author": "Dinesh Rathod",
+    "date":new Date()
+})
+WriteResult({
+    "nInserted": 1
+})
+
+
+> db.Post.insert({
+    "name": "Future of Python",
+    "slug": "future-of-python",
+    "description": "Python is becomming most popular programming language from decade..",
+    "author": "Sanket",
+    "date":new Date()
+})
+WriteResult({
+    "nInserted": 1
+})
+
+    
+
+> db.Post.update({
+    "_id":ObjectId("61c3625e19c20a3515a89419")
+},
+{$set: {
+        "name": "features of Windows 11",
+        "slug": "features-of-windows-11",
+        "description": "Windows 11 is an latest version on windows from Microsoft",
+        "author": "sanket"
+    }
+},
+{multi: true
+})
+WriteResult({
+    "nMatched": 1,
+    "nUpserted": 0,
+    "nModified": 1
+})
+
+
+61c3635b19c20a3515a8941b
+
